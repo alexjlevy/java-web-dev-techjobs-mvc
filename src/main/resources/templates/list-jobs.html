@@ -10,7 +10,7 @@
             <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
         </div>
 
-        <table class="job-listing" th:each="job : ${jobs}">
+        <table th:fragment = "display-table" class="job-listing" th:each="job : ${jobs}">
             <tr>
                 <td><b>ID: </b></td>
                 <td th:text = "${job.getId()}"></td>
